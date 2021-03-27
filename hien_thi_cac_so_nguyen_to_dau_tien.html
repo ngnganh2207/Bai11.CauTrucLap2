@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Bài tập] Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+   // let n;
+    let total = 0;
+    var a = prompt("Nhập số: ");
+    for (let i = 0;i<=a;i++){
+        let k = true;
+        if(i <= 1){
+            continue;
+        }else {
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    k = false;
+                    break;
+                }
+            }
+            if(k == true){
+                document.write(i+" ");
+                total += i;
+            }
+        }
+    }document.write("<br>" +"Tổng bằng: " + total);
+</script>
+</body>
+</html>

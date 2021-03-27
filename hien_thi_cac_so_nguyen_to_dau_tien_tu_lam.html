@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị Các Số Nguyên Tố Đầu Tiên</title>
+</head>
+<body>
+<script>
+    var total=0;
+    var a= prompt("Let input a number now");
+    for( let i=0;i<=a;i++){
+        let check= true;
+        if(i<=1){
+            continue;
+        }else{
+            for( let j=2;j<i;j++){
+                if(i%j==0){
+                    check=false;
+                    break;
+                }
+            }
+            if(check==true){
+                document.write(i+" ");
+                total+=i;
+            }
+        }
+
+    }document.write("<br/>"+total);
+
+</script>
+</body>
+</html>
